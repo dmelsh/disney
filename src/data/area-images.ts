@@ -44,3 +44,47 @@ export const AREA_IMAGES: Record<string, AreaImage> = {
   'new-orleans-square': commons('New Orleans Square Disneyland.jpg'),
   'parade-finale': commons('Paint the Night parade.jpg'),
 };
+
+// Keyed by activity id. Mostly rides/attractions, where Commons has real
+// photos. Character meets, food, and transitions are left to a family photo or
+// the illustrated scene. Any URL that doesn't resolve falls back automatically.
+export const ACTIVITY_IMAGES: Record<string, AreaImage> = {
+  // Cars Land
+  'cars-maters-jamboree': commons("Mater's Junkyard Jamboree.jpg"),
+  'cars-rsr': commons('Radiator Springs Racers.jpg'),
+  // Hollywood Land
+  'hollywood-anna-elsa': commons('Anna and Elsa.jpg'),
+  // Pixar Pier
+  'pixar-little-mermaid': commons(
+    "The Little Mermaid - Ariel's Undersea Adventure.jpg",
+  ),
+  'pixar-tsmm': commons('Toy Story Midway Mania.jpg'),
+  'pixar-pal-a-round': commons('Pixar Pal-A-Round.jpg'),
+  // Mickey's Toontown
+  'toontown-runaway-railway': commons(
+    "Mickey and Minnie's Runaway Railway.jpg",
+  ),
+  'toontown-roger-rabbit': commons("Roger Rabbit's Car Toon Spin.jpg"),
+  'toontown-mickey-house': commons("Mickey's House.jpg"),
+  // Fantasyland
+  'fantasyland-small-world': commons("It's a Small World, Disneyland.jpg"),
+  'fantasyland-casey-jr': commons('Casey Jr. Circus Train.jpg'),
+  'fantasyland-mad-tea-party': commons('Mad Tea Party, Disneyland.jpg'),
+  // Tomorrowland
+  'tomorrowland-autopia': commons('Autopia, Disneyland.jpg'),
+  // Galaxy's Edge
+  'galaxys-edge-batuu-plaza': commons(
+    "Millennium Falcon at Star Wars Galaxy's Edge.jpg",
+  ),
+  'galaxys-edge-smugglers-run': commons(
+    'Millennium Falcon - Smugglers Run.jpg',
+  ),
+  // Critter Country
+  'critter-winnie-pooh': commons(
+    'The Many Adventures of Winnie the Pooh, Disneyland.jpg',
+  ),
+  // New Orleans Square
+  'neworleans-railroad': commons('Disneyland Railroad.jpg'),
+  // Parade Finale
+  'parade-paint-the-night': commons('Paint the Night parade.jpg'),
+};
