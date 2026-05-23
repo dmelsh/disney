@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1b2951" />
+      <stop offset="1" stop-color="#e94560" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#g)" />
+  <!-- three abstract "ears" silhouette (generic, non-trademarked) -->
+  <circle cx="22" cy="24" r="9" fill="#ffffff" />
+  <circle cx="42" cy="24" r="9" fill="#ffffff" />
+  <circle cx="32" cy="40" r="13" fill="#ffffff" />
+  <circle cx="32" cy="40" r="4.5" fill="#1b2951" />
+</svg>

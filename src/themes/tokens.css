@@ -1,0 +1,15 @@
+/* Base CSS custom properties. Per-land values are injected at runtime by
+   the useTheme hook (see hooks/useTheme.ts), which sets --theme-* on the
+   themed container. These are the neutral fallbacks. */
+:root {
+  --theme-primary: #1b2951;
+  --theme-secondary: #e94560;
+  --theme-on-primary: #ffffff;
+  --theme-surface: #ffffff;
+  --theme-border: #e5e7eb;
+  --theme-gradient: linear-gradient(135deg, #1b2951 0%, #3a4a73 55%, #6b7aa3 100%);
+
+  --ink: #1c1c22;
+  --ink-soft: #4b5563;
+  --page-bg: #f7f7fb;
+}

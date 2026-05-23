@@ -1,0 +1,79 @@
+@import '../themes/tokens.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--page-bg);
+  color: var(--ink);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Safe-area padding for iPhone notch / home indicator */
+.pad-safe-bottom {
+  padding-bottom: calc(1rem + env(safe-area-inset-bottom));
+}
+.pad-safe-top {
+  padding-top: env(safe-area-inset-top);
+}
+
+/* Visible focus ring for keyboard users (accessibility AA) */
+:focus-visible {
+  outline: 3px solid #1d4ed8;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Themed font-hint helpers */
+.font-hint-serif {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+.font-hint-display {
+  font-family: 'Anton', Impact, sans-serif;
+  letter-spacing: 0.01em;
+}
+.font-hint-mono {
+  font-family: 'Space Mono', ui-monospace, monospace;
+}
+.font-hint-sans {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Print-friendly view (extras: print/share) */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: #fff;
+  }
+  .print-hero {
+    background: #fff !important;
+    color: #111 !important;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
