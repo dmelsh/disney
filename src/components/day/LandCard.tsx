@@ -3,6 +3,7 @@ import { ArrowRight } from 'lucide-react';
 import type { Land } from '../../types';
 import { getTheme } from '../../themes';
 import { paths } from '../../hooks/useNavigation';
+import { SceneThumb } from '../scenery/LandScene';
 
 export function LandCard({ land }: { land: Land }) {
   const theme = getTheme(land.theme);
@@ -18,13 +19,10 @@ export function LandCard({ land }: { land: Land }) {
         style={{ background: theme.primary }}
       />
       <div className="flex items-start gap-4 py-4 pl-6 pr-4">
-        <div
-          className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl text-2xl"
-          style={{ background: `${theme.primary}1a` }}
-          aria-hidden
-        >
-          {theme.emoji}
-        </div>
+        <SceneThumb
+          themeKey={land.theme}
+          className="h-16 w-20 shrink-0 rounded-xl ring-1 ring-black/5 sm:h-20 sm:w-28"
+        />
 
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-center gap-x-2 gap-y-1">

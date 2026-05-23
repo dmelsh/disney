@@ -5,6 +5,8 @@ import { NEUTRAL_GRADIENT } from '../../themes';
 import { useAmbientSound } from '../../hooks/useAmbientSound';
 import { LandCard } from './LandCard';
 import { ShareButton } from '../ui/ShareButton';
+import { ClampText } from '../ui/ClampText';
+import { DayScene } from '../scenery/LandScene';
 
 export function DayOverview() {
   useAmbientSound(null); // overview is intentionally un-themed / quiet
@@ -16,14 +18,15 @@ export function DayOverview() {
     <article>
       {/* Hero — neutral, not themed to any single land */}
       <header
-        className="print-hero px-5 py-14 text-center text-white sm:py-20"
+        className="print-hero relative overflow-hidden px-5 py-14 text-center text-white sm:py-20"
         style={{ background: NEUTRAL_GRADIENT }}
       >
+        <DayScene className="pointer-events-none absolute inset-0 h-full w-full opacity-90" />
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="mx-auto max-w-content"
+          className="relative mx-auto max-w-content"
         >
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-white/70">
             A keepsake
@@ -41,11 +44,18 @@ export function DayOverview() {
       </header>
 
       <div className="mx-auto max-w-content px-5 py-10">
-        <p className="text-lg leading-relaxed text-slate-700">{day.intro}</p>
+        <ClampText
+          text={day.intro}
+          lines={3}
+          className="text-lg leading-relaxed text-slate-700"
+        />
 
-        <h2 className="mb-4 mt-12 text-sm font-bold uppercase tracking-widest text-slate-400">
+        <h2 className="mb-1 mt-12 text-sm font-bold uppercase tracking-widest text-slate-400">
           The day, land by land
         </h2>
+        <p className="mb-4 text-sm text-slate-500">
+          Tap a place to jump into that part of the day. 👇
+        </p>
 
         <div className="space-y-4">
           {day.lands.map((land, i) => (
@@ -65,7 +75,11 @@ export function DayOverview() {
           <h2 className="mb-2 text-sm font-bold uppercase tracking-widest text-slate-400">
             How the day ended
           </h2>
-          <p className="leading-relaxed text-slate-700">{day.closing}</p>
+          <ClampText
+            text={day.closing}
+            lines={3}
+            className="leading-relaxed text-slate-700"
+          />
         </div>
 
         <footer className="mt-10 border-t border-slate-200 pt-6 text-center text-sm text-slate-400">

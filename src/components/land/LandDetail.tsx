@@ -3,8 +3,9 @@ import { Link, Navigate, useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import day from '../../data/day-may-22-2026';
-import type { Activity } from '../../types';
+import type { Activity, ThemeKey } from '../../types';
 import { getTheme } from '../../themes';
+import { LandScene } from '../scenery/LandScene';
 import { useAmbientSound } from '../../hooks/useAmbientSound';
 import { usePhotos } from '../../hooks/usePhotos';
 import { paths } from '../../hooks/useNavigation';
@@ -19,14 +20,15 @@ import { ShareButton } from '../ui/ShareButton';
 function ActivityCard({
   landId,
   activity,
-  themePrimary,
+  themeKey,
 }: {
   landId: string;
   activity: Activity;
-  themePrimary: string;
+  themeKey: ThemeKey;
 }) {
   // Read merged photos so a user-uploaded hero shows as the card thumbnail.
   const { hero } = usePhotos(activity.id, activity.photos);
+  const theme = getTheme(themeKey);
 
   return (
     <motion.div whileTap={{ scale: 0.98 }}>
@@ -35,8 +37,8 @@ function ActivityCard({
         className="flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-200 transition hover:shadow-md"
       >
         <div
-          className="relative flex aspect-[16/10] items-center justify-center"
-          style={{ background: `${themePrimary}14` }}
+          className="relative flex aspect-[16/10] items-center justify-center overflow-hidden"
+          style={{ background: theme.gradient }}
         >
           {hero ? (
             <img
@@ -46,10 +48,15 @@ function ActivityCard({
               className="absolute inset-0 h-full w-full object-cover"
             />
           ) : (
-            <ActivityTypeIcon
-              type={activity.type}
-              className="h-10 w-10 opacity-40"
-            />
+            <>
+              <LandScene
+                themeKey={themeKey}
+                className="absolute inset-0 h-full w-full"
+              />
+              <div className="relative flex h-11 w-11 items-center justify-center rounded-full bg-white/20 text-white ring-1 ring-white/30 backdrop-blur-sm">
+                <ActivityTypeIcon type={activity.type} className="h-6 w-6" />
+              </div>
+            </>
           )}
         </div>
 
@@ -91,7 +98,6 @@ export function LandDetail() {
 
   if (!land) return <Navigate to={paths.day()} replace />;
 
-  const theme = getTheme(land.theme);
   const nextLand =
     landIndex >= 0 && landIndex < day.lands.length - 1
       ? day.lands[landIndex + 1]
@@ -115,7 +121,7 @@ export function LandDetail() {
               key={activity.id}
               landId={land.id}
               activity={activity}
-              themePrimary={theme.primary}
+              themeKey={land.theme}
             />
           ))}
         </div>

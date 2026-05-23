@@ -3,6 +3,7 @@ import { useRef } from 'react';
 import type { Activity, ActivityPhoto, ThemeKey } from '../../types';
 import { useTheme } from '../../hooks/useTheme';
 import { ActivityTypeIcon, PriorityBadge, activityTypeLabel } from '../ui/Badge';
+import { LandScene } from '../scenery/LandScene';
 
 export function ActivityHero({
   activity,
@@ -46,11 +47,14 @@ export function ActivityHero({
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
         </div>
       ) : (
-        <div className="flex h-[34vh] min-h-[200px] w-full items-center justify-center">
-          <ActivityTypeIcon
-            type={activity.type}
-            className="h-16 w-16 opacity-30"
+        <div className="relative flex h-[34vh] min-h-[200px] w-full items-center justify-center overflow-hidden">
+          <LandScene
+            themeKey={themeKey}
+            className="pointer-events-none absolute inset-0 h-full w-full opacity-90"
           />
+          <div className="relative flex h-16 w-16 items-center justify-center rounded-full bg-white/20 ring-1 ring-white/30 backdrop-blur-sm">
+            <ActivityTypeIcon type={activity.type} className="h-8 w-8" />
+          </div>
         </div>
       )}
 

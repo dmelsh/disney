@@ -9,6 +9,7 @@ import { paths, useNavigation } from '../../hooks/useNavigation';
 import { ActivityHero } from './ActivityHero';
 import { PhotoGallery } from './PhotoGallery';
 import { ShareButton } from '../ui/ShareButton';
+import { Disclosure } from '../ui/Disclosure';
 
 export function ActivityDetail() {
   const { landId, activityId } = useParams();
@@ -44,52 +45,65 @@ export function ActivityDetail() {
       />
 
       <div className="mx-auto max-w-content px-5 py-8">
-        <div className="mb-4 flex items-start justify-between gap-3">
-          <p className="font-hint-serif text-xl leading-relaxed text-slate-800 sm:text-2xl">
-            {activity.summary}
-          </p>
+        {/* The short, friendly version — readable at a glance. */}
+        <p className="font-hint-serif text-2xl leading-relaxed text-slate-800 sm:text-3xl">
+          {activity.summary}
+        </p>
+        <div className="mt-3">
+          <ShareButton title={`${activity.name} · ${day.title}`} />
         </div>
-        <ShareButton title={`${activity.name} · ${day.title}`} />
 
-        {narrativeParas.length > 0 && (
-          <div className="mt-5 space-y-4">
-            {narrativeParas.map((p, i) => (
-              <p key={i} className="leading-relaxed text-slate-700">
-                {p}
-              </p>
-            ))}
-          </div>
-        )}
-
-        {activity.details && activity.details.length > 0 && (
-          <div className="mt-6">
-            <h2 className="mb-2 text-sm font-bold uppercase tracking-widest text-slate-400">
-              Details
-            </h2>
-            <ul className="space-y-2">
-              {activity.details.map((d, i) => (
-                <li
-                  key={i}
-                  className="flex items-start gap-2 rounded-lg bg-white px-3 py-2 text-sm text-slate-700 ring-1 ring-slate-200"
-                >
-                  <span
-                    aria-hidden
-                    className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full"
-                    style={{ background: theme.primary }}
-                  />
-                  {d}
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
-
+        {/* Photos first — the part everyone wants to touch. */}
         <PhotoGallery
           photos={manager.photos}
           manager={manager}
           bundledIds={bundledIds}
           themePrimary={theme.primary}
         />
+
+        {/* The wall of text lives here, opt-in. */}
+        {(narrativeParas.length > 0 ||
+          (activity.details && activity.details.length > 0)) && (
+          <div className="mt-8">
+            <Disclosure
+              label="Read the full story"
+              openLabel="Hide the full story"
+              icon="📖"
+              accent={theme.primary}
+            >
+              <div className="space-y-4">
+                {narrativeParas.map((p, i) => (
+                  <p key={i} className="leading-relaxed text-slate-700">
+                    {p}
+                  </p>
+                ))}
+              </div>
+
+              {activity.details && activity.details.length > 0 && (
+                <div className="mt-6">
+                  <h2 className="mb-2 text-sm font-bold uppercase tracking-widest text-slate-400">
+                    Quick facts
+                  </h2>
+                  <ul className="space-y-2">
+                    {activity.details.map((d, i) => (
+                      <li
+                        key={i}
+                        className="flex items-start gap-2 rounded-lg bg-white px-3 py-2 text-sm text-slate-700 ring-1 ring-slate-200"
+                      >
+                        <span
+                          aria-hidden
+                          className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full"
+                          style={{ background: theme.primary }}
+                        />
+                        {d}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </Disclosure>
+          </div>
+        )}
 
         {/* chronological prev / next */}
         <nav className="mt-10 grid grid-cols-2 gap-3 border-t border-slate-200 pt-6">
