@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, Navigate, useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
@@ -29,6 +29,8 @@ function ActivityCard({
   // Read merged photos so a user-uploaded hero shows as the card thumbnail.
   const { hero } = usePhotos(activity.id, activity.photos);
   const theme = getTheme(themeKey);
+  const [imgFailed, setImgFailed] = useState(false);
+  const thumbSrc = hero?.src ?? (imgFailed ? undefined : activity.heroImage);
 
   return (
     <motion.div whileTap={{ scale: 0.98 }}>
@@ -40,11 +42,12 @@ function ActivityCard({
           className="relative flex aspect-[16/10] items-center justify-center overflow-hidden"
           style={{ background: theme.gradient }}
         >
-          {hero ? (
+          {thumbSrc ? (
             <img
-              src={hero.src}
-              alt={hero.caption ?? activity.name}
+              src={thumbSrc}
+              alt={hero?.caption ?? activity.name}
               loading="lazy"
+              onError={() => setImgFailed(true)}
               className="absolute inset-0 h-full w-full object-cover"
             />
           ) : (

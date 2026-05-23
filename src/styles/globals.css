@@ -60,6 +60,47 @@ body {
   font-family: 'Inter', system-ui, sans-serif;
 }
 
+/* Gentle, ambient motion for the illustrated area scenes.
+   All of this is disabled automatically by the prefers-reduced-motion rule. */
+@keyframes sceneBreath {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+.scene-breath {
+  transform-origin: center;
+  animation: sceneBreath 18s ease-in-out infinite alternate;
+}
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+.twinkle {
+  animation: twinkle 4.5s ease-in-out infinite;
+}
+@keyframes floatY {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+.float-slow {
+  animation: floatY 9s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
 /* Print-friendly view (extras: print/share) */
 @media print {
   .no-print {

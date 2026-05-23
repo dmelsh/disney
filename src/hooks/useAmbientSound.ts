@@ -5,9 +5,8 @@ import type { ThemeKey } from '../types';
 /**
  * Ambient sound, opt-in and muted by default.
  *
- * We deliberately synthesize a soft tonal pad with the Web Audio API instead of
- * bundling any Disney audio — no copyrighted assets, no IP infringement (PRD
- * §2 non-goal). Each land gets a gentle chord that evokes its mood. The whole
+ * We synthesize a soft tonal pad with the Web Audio API (no audio files to ship
+ * or load). Each land gets a gentle chord that evokes its mood. The whole
  * system stays silent until the user toggles it on.
  */
 

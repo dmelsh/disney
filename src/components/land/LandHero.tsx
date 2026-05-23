@@ -2,7 +2,7 @@ import type { Land } from '../../types';
 import { useTheme } from '../../hooks/useTheme';
 import { ParkBadge } from '../ui/Badge';
 import { ClampText } from '../ui/ClampText';
-import { LandScene } from '../scenery/LandScene';
+import { LandBackground } from '../scenery/LandBackground';
 
 export function LandHero({ land }: { land: Land }) {
   const { theme, style, fontHintClass } = useTheme(land.theme);
@@ -12,14 +12,14 @@ export function LandHero({ land }: { land: Land }) {
       style={{ ...style, background: theme.gradient }}
       className="print-hero relative overflow-hidden px-5 pb-10 pt-10 text-[color:var(--theme-on-primary)] sm:pt-14"
     >
-      {/* illustrated area background */}
-      <LandScene
-        themeKey={land.theme}
-        className="pointer-events-none absolute inset-0 h-full w-full opacity-90"
+      {/* area background: family photo → licensed image → illustrated scene */}
+      <LandBackground
+        land={land}
+        className="pointer-events-none absolute inset-0 h-full w-full opacity-95"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/55 via-black/15 to-black/10"
       />
 
       <div className="relative mx-auto max-w-content">

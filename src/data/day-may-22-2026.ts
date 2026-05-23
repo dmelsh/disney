@@ -1,4 +1,5 @@
 import type { Day } from '../types';
+import { AREA_IMAGES } from './area-images';
 
 // Content source-of-truth: Disneyland_May_22_2026_The_Day.docx
 // Narrative paragraphs are lifted/adapted from that document. Avengers Campus
@@ -555,5 +556,15 @@ export const day: Day = {
     },
   ],
 };
+
+// Attach real reference photos per land (see area-images.ts). Family photos
+// and the illustrated scenes still take over when appropriate.
+for (const land of day.lands) {
+  const img = AREA_IMAGES[land.id];
+  if (img) {
+    land.heroImage = img.url;
+    land.heroImageCredit = img.credit;
+  }
+}
 
 export default day;

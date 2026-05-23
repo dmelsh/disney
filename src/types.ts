@@ -31,6 +31,12 @@ export interface ActivityPhoto {
   isHero?: boolean; // displays prominently at top of activity view
 }
 
+/** Attribution for a bundled/linked reference image (e.g. a CC photo). */
+export interface ImageCredit {
+  text: string; // e.g. "Photo: Jane Doe / Wikimedia Commons (CC BY-SA 4.0)"
+  href?: string; // link to the source / license
+}
+
 export interface Activity {
   id: string; // stable kebab-case, e.g. 'cars-land-rsr'
   name: string;
@@ -41,6 +47,9 @@ export interface Activity {
   details?: string[]; // bullets of factual info
   priority?: Priority; // green = top-tier, yellow = nice-to-have
   photos: ActivityPhoto[];
+  /** Optional reference image (URL) shown when no family photo exists yet. */
+  heroImage?: string;
+  heroImageCredit?: ImageCredit;
 }
 
 export interface Land {
@@ -51,6 +60,13 @@ export interface Land {
   blurb: string; // 1 paragraph describing the land + their experience there
   firstVisitTime: string; // '8:30 AM' — used for chronological ordering
   activities: Activity[];
+  /**
+   * Optional reference image (URL) used as the area background. Family photos
+   * uploaded to this land's activities take precedence; the illustrated scene
+   * is the final fallback. Always set heroImageCredit for licensed photos.
+   */
+  heroImage?: string;
+  heroImageCredit?: ImageCredit;
 }
 
 export interface Day {

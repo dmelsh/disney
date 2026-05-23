@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import type { Activity, ActivityPhoto, ThemeKey } from '../../types';
 import { useTheme } from '../../hooks/useTheme';
 import { ActivityTypeIcon, PriorityBadge, activityTypeLabel } from '../ui/Badge';
@@ -16,12 +16,19 @@ export function ActivityHero({
 }) {
   const { theme, style, fontHintClass } = useTheme(themeKey);
   const ref = useRef<HTMLDivElement>(null);
+  const [webFailed, setWebFailed] = useState(false);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ['start start', 'end start'],
   });
   // soft parallax on the hero image
   const y = useTransform(scrollYProgress, [0, 1], ['0%', '18%']);
+
+  // family photo wins; else a licensed reference image; else the scene.
+  const familySrc = hero?.src;
+  const webSrc = !familySrc && !webFailed ? activity.heroImage : undefined;
+  const imgSrc = familySrc ?? webSrc;
+  const showWebCredit = !!webSrc && !!activity.heroImageCredit;
 
   return (
     <header
@@ -36,21 +43,37 @@ export function ActivityHero({
         style={{ background: theme.secondary }}
       />
 
-      {hero ? (
+      {imgSrc ? (
         <div className="relative h-[42vh] min-h-[260px] w-full overflow-hidden">
           <motion.img
-            src={hero.src}
-            alt={hero.caption ?? activity.name}
+            src={imgSrc}
+            alt={hero?.caption ?? activity.name}
             style={{ y }}
+            onError={() => webSrc && setWebFailed(true)}
             className="absolute inset-0 h-[120%] w-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+          {showWebCredit && (
+            <span className="absolute right-2 top-3 z-10 rounded bg-black/40 px-1.5 py-0.5 text-[10px] text-white/85 no-print">
+              {activity.heroImageCredit!.href ? (
+                <a
+                  href={activity.heroImageCredit!.href}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  {activity.heroImageCredit!.text}
+                </a>
+              ) : (
+                activity.heroImageCredit!.text
+              )}
+            </span>
+          )}
         </div>
       ) : (
         <div className="relative flex h-[34vh] min-h-[200px] w-full items-center justify-center overflow-hidden">
           <LandScene
             themeKey={themeKey}
-            className="pointer-events-none absolute inset-0 h-full w-full opacity-90"
+            className="scene-breath pointer-events-none absolute inset-0 h-full w-full opacity-90"
           />
           <div className="relative flex h-16 w-16 items-center justify-center rounded-full bg-white/20 ring-1 ring-white/30 backdrop-blur-sm">
             <ActivityTypeIcon type={activity.type} className="h-8 w-8" />
@@ -59,7 +82,7 @@ export function ActivityHero({
       )}
 
       <div
-        className={`px-5 ${hero ? 'absolute inset-x-0 bottom-0' : 'relative pb-8'}`}
+        className={`px-5 ${imgSrc ? 'absolute inset-x-0 bottom-0' : 'relative pb-8'}`}
       >
         <div className="mx-auto max-w-content pb-6">
           <div className="mb-2 flex flex-wrap items-center gap-2 text-sm font-medium text-[color:var(--theme-on-primary)]/85">
@@ -70,9 +93,7 @@ export function ActivityHero({
             {activity.time && <span>{activity.time}</span>}
             <PriorityBadge priority={activity.priority} />
           </div>
-          <h1
-            className={`text-3xl leading-tight sm:text-5xl ${fontHintClass}`}
-          >
+          <h1 className={`text-3xl leading-tight sm:text-5xl ${fontHintClass}`}>
             {activity.name}
           </h1>
         </div>

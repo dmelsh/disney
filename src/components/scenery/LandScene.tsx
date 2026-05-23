@@ -4,13 +4,21 @@ import { getTheme } from '../../themes';
 
 /**
  * Decorative, hand-drawn SVG scenes evocative of each land — desert mesas,
- * a castle, a ferris wheel, alien spires, fireworks, and so on. These are
- * original silhouettes (no Disney brand assets, logos, or character art) used
- * as friendly background imagery behind the themed gradients.
+ * a castle, a ferris wheel, alien spires, fireworks, and so on. Used as the
+ * fallback background imagery behind the themed gradients when no photo is set.
  */
 
-const STAR = (x: number, y: number, r: number, c: string, op = 0.8) => (
-  <circle key={`s${x}-${y}`} cx={x} cy={y} r={r} fill={c} fillOpacity={op} />
+const STAR = (x: number, y: number, r: number, c: string, i: number) => (
+  <circle
+    key={`s${x}-${y}`}
+    cx={x}
+    cy={y}
+    r={r}
+    fill={c}
+    fillOpacity={0.7}
+    className="twinkle"
+    style={{ animationDelay: `${(i % 5) * 0.7}s` }}
+  />
 );
 
 function stars(c: string): ReactElement {
@@ -25,7 +33,7 @@ function stars(c: string): ReactElement {
     [250, 80, 1],
     [120, 90, 1],
   ];
-  return <g>{pts.map(([x, y, r]) => STAR(x, y, r, c, 0.7))}</g>;
+  return <g>{pts.map(([x, y, r], i) => STAR(x, y, r, c, i))}</g>;
 }
 
 function pine(x: number, y: number, s: number, sec: string, op: number) {
@@ -96,7 +104,14 @@ function burst(cx: number, cy: number, c: string) {
 const SCENES: Record<ThemeKey, (sec: string) => ReactElement> = {
   cars: (sec) => (
     <g>
-      <circle cx={322} cy={54} r={30} fill={sec} fillOpacity={0.55} />
+      <circle
+        cx={322}
+        cy={54}
+        r={30}
+        fill={sec}
+        fillOpacity={0.55}
+        className="float-slow"
+      />
       <path d="M0 150 70 96 130 150Z" fill="#fff" fillOpacity={0.12} />
       <path d="M80 150 165 78 245 150Z" fill="#fff" fillOpacity={0.18} />
       <path d="M210 150 290 104 370 150Z" fill="#fff" fillOpacity={0.12} />
@@ -219,7 +234,14 @@ const SCENES: Record<ThemeKey, (sec: string) => ReactElement> = {
   ),
   toontown: (sec) => (
     <g>
-      <circle cx={58} cy={54} r={26} fill={sec} fillOpacity={0.55} />
+      <circle
+        cx={58}
+        cy={54}
+        r={26}
+        fill={sec}
+        fillOpacity={0.55}
+        className="float-slow"
+      />
       <path d="M0 170 Q100 132 200 170 T400 170 V220 H0Z" fill="#fff" fillOpacity={0.18} />
       <rect x={120} y={110} width={50} height={64} rx={14} fill="#fff" fillOpacity={0.2} />
       <rect x={190} y={96} width={46} height={78} rx={16} fill="#fff" fillOpacity={0.16} />
@@ -267,15 +289,17 @@ const SCENES: Record<ThemeKey, (sec: string) => ReactElement> = {
         strokeWidth={4}
         fill="none"
       />
-      <g transform="rotate(18 112 120)">
-        <path
-          d="M112 78 c14 0 22 18 22 40 c0 16 -8 30 -22 38 c-14 -8 -22 -22 -22 -38 c0 -22 8 -40 22 -40Z"
-          fill="#fff"
-          fillOpacity={0.22}
-        />
-        <circle cx={112} cy={116} r={8} fill={sec} fillOpacity={0.8} />
-        <path d="M90 150 80 168 102 156Z" fill={sec} fillOpacity={0.6} />
-        <path d="M134 150 144 168 122 156Z" fill={sec} fillOpacity={0.6} />
+      <g className="float-slow">
+        <g transform="rotate(18 112 120)">
+          <path
+            d="M112 78 c14 0 22 18 22 40 c0 16 -8 30 -22 38 c-14 -8 -22 -22 -22 -38 c0 -22 8 -40 22 -40Z"
+            fill="#fff"
+            fillOpacity={0.22}
+          />
+          <circle cx={112} cy={116} r={8} fill={sec} fillOpacity={0.8} />
+          <path d="M90 150 80 168 102 156Z" fill={sec} fillOpacity={0.6} />
+          <path d="M134 150 144 168 122 156Z" fill={sec} fillOpacity={0.6} />
+        </g>
       </g>
     </g>
   ),
@@ -289,11 +313,13 @@ const SCENES: Record<ThemeKey, (sec: string) => ReactElement> = {
       <rect x={120} y={120} width={26} height={30} fill="#fff" fillOpacity={0.14} />
       <rect x={300} y={96} width={46} height={54} fill="#fff" fillOpacity={0.16} />
       <rect x={0} y={150} width={400} height={70} fill="#fff" fillOpacity={0.2} />
-      <g transform="translate(232 92)">
-        <ellipse cx={0} cy={0} rx={56} ry={16} fill="#fff" fillOpacity={0.24} />
-        <ellipse cx={0} cy={-6} rx={30} ry={12} fill="#fff" fillOpacity={0.2} />
-        <rect x={40} y={-4} width={26} height={6} rx={3} fill="#fff" fillOpacity={0.2} />
-        <circle cx={-10} cy={-8} r={4} fill={sec} fillOpacity={0.85} />
+      <g className="float-slow">
+        <g transform="translate(232 92)">
+          <ellipse cx={0} cy={0} rx={56} ry={16} fill="#fff" fillOpacity={0.24} />
+          <ellipse cx={0} cy={-6} rx={30} ry={12} fill="#fff" fillOpacity={0.2} />
+          <rect x={40} y={-4} width={26} height={6} rx={3} fill="#fff" fillOpacity={0.2} />
+          <circle cx={-10} cy={-8} r={4} fill={sec} fillOpacity={0.85} />
+        </g>
       </g>
     </g>
   ),

@@ -99,8 +99,16 @@ src/
     ui/                      # Badge, Lightbox, ShareButton
 ```
 
-## A note on Disney IP
+## Images & audio
 
-Theming is **inspiration only** — evocative color palettes and references, not
-Disney brand assets, logos, character art, or copyrighted audio. Photos you add
-are your own. Please don't bundle copyrighted Disney artwork.
+This is a **private, personal-use family keepsake** — not a published product.
+
+- **Area backgrounds**: each land shows a family photo (if you've uploaded one),
+  otherwise a real reference photo hotlinked from Wikimedia Commons
+  (`src/data/area-images.ts`), otherwise a built-in illustrated scene. Any image
+  that fails to load falls back to the illustration automatically.
+- **Your photos** always take precedence over reference images.
+- **Ambient sound** is synthesized in the browser (no audio files bundled).
+
+To change a land's reference photo, edit `src/data/area-images.ts` and paste a
+direct image URL (or just upload your own photo to that land in the app).

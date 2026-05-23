@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import type { ActivityPhoto } from '../types';
+import type { ActivityPhoto, Land } from '../types';
 
 const KEY_PREFIX = 'photo:';
 const MAX_LONG_SIDE = 1280;
@@ -66,6 +66,30 @@ function fileToDownscaledDataUri(file: File): Promise<string> {
     };
     img.src = url;
   });
+}
+
+/** The hero (or first) photo for one activity, merging bundled + stored. */
+export function activityHeroPhoto(
+  activityId: string,
+  bundled: ActivityPhoto[] = [],
+): ActivityPhoto | null {
+  const combined = [...bundled, ...readStored(activityId)];
+  return combined.find((p) => p.isHero) ?? combined[0] ?? null;
+}
+
+/**
+ * The first available family photo across a land's activities — used as the
+ * "real view" area background. Read once per mount (re-reads when the land
+ * changes, e.g. on navigation).
+ */
+export function useLandBackgroundPhoto(land: Land): ActivityPhoto | null {
+  return useMemo(() => {
+    for (const a of land.activities) {
+      const hero = activityHeroPhoto(a.id, a.photos);
+      if (hero) return hero;
+    }
+    return null;
+  }, [land]);
 }
 
 function uuid(): string {

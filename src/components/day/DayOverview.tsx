@@ -21,7 +21,7 @@ export function DayOverview() {
         className="print-hero relative overflow-hidden px-5 py-14 text-center text-white sm:py-20"
         style={{ background: NEUTRAL_GRADIENT }}
       >
-        <DayScene className="pointer-events-none absolute inset-0 h-full w-full opacity-90" />
+        <DayScene className="scene-breath pointer-events-none absolute inset-0 h-full w-full opacity-90" />
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
