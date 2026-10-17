@@ -1,0 +1,93 @@
+# Silver Dollar City (Branson, MO): park layout, themed areas and attractions, as of fall 2026
+
+**Method caveat (read first).** WebFetch and curl were blocked in this session (silverdollarcity.com and en.wikipedia.org returned 403 from the egress proxy, and WebFetch could not resolve other hosts). Every finding below therefore comes from WebSearch result summaries, not from reading the full pages. Treat the area-to-ride mapping as partly verified. Items marked UNVERIFIED are not backed by a source I could see. Today is 2026-10-17. Search summaries rarely show publication dates, so I give the date where the summary or URL shows one and otherwise say "date not shown".
+
+## 1. What are the official themed areas/lands today, and which attractions belong to each?
+
+### Takeaway
+The official ride page (silverdollarcity.com/theme-park/attractions/rides/) groups rides under these area names: The Grand Exposition, The Fire District, Homestead Ridge, Midtown, Valley Road, Wilson's Farm, Hugo's Hill Street, Western Outskirts, and Rivertown. A new area, Daredevil Pass, was announced in August 2026 for a 2027 opening. Several names from the assignment (Craft Valley/Craftsmen's Valley, Wilderness Crossing, Hugo's Hollow, Echo Hollow as a land) were not confirmed as current areas. I could not retrieve the official map to confirm boundaries.
+
+### Cited Findings
+
+**Area names on the official ride listing**
+- The official Rides & Attractions page lists rides under Hugo's Hill Street, Homestead Ridge, The Grand Exposition, The Fire District, Western Outskirts, Midtown, and Valley Road. A search summary reports American Plunge under Hugo's Hill Street and The Flooded Mine under Valley Road. — [SDC Rides & Attractions](https://www.silverdollarcity.com/theme-park/attractions/rides/), seen via search (date not shown)
+- Wilson's Farm and Rivertown also appear as areas in the official listing and third-party guides. — [SDC Rides & Attractions](https://www.silverdollarcity.com/theme-park/attractions/rides/), [Theme Park Insider guide](https://www.themeparkinsider.com/reviews/silver-dollar-city/) (date not shown). The Theme Park Insider guide also lists Valley Road as a section.
+- Third-party map guide [Deep Arrival "Park Map 2026"](https://deeparrival.com/theme-parks/silver-dollar-city/park-map/) uses different labels (The Coasters, The 1880s Town Square, Grand Exposition, Rivertown, Fire in the Hole). The search tool flagged these as differing from the official listing. Prefer the official names.
+- Search for "Craftsmen's Valley" and "Wilderness Crossing" returned no source naming them as current areas. — search results above (no citation available; absence of evidence only)
+
+**Attractions by area (as reported in search summaries of the official ride page and guides)**
+- **The Fire District** (a land created for the new coaster; also called Fireman's Landing in one review): Fire in the Hole, Fire Wagon Frenzy, FireFall, FireHouse Play Place. — [SDC Rides & Attractions](https://www.silverdollarcity.com/theme-park/attractions/rides/); Fireman's Landing naming from [Theme Park Insider](https://www.themeparkinsider.com/reviews/silver-dollar-city/)
+- **Fire in the Hole (2024)**: new indoor coaster officially opened March 30, 2024, in the Fire District. The original 1972 version closed after the 2023 season. — [Wikipedia: Fire in the Hole (2024 roller coaster)](https://en.wikipedia.org/wiki/Fire_in_the_Hole_(2024_roller_coaster)) and [1972 version](https://en.wikipedia.org/wiki/Fire_in_the_Hole_(1972_roller_coaster))
+- **The Grand Exposition** (themed to the World's Fairs and Expositions of the late 1800s, about 10 family rides): Electro Spin, Elephant March, Grand Exposition Coaster, Happy Frogs, Magnificent Wave Carousel. — [SDC Rides & Attractions](https://www.silverdollarcity.com/theme-park/attractions/rides/); "10 family rides" and era theme from [Tripster attractions page](https://www.tripster.com/branson/silver-dollar-city-attractions-branson) (2026 page, per title)
+- **Homestead Ridge**: Homestead Animal Barnyard; Birdie's Cabin (spelled "Birdle's Cabin" in the summary, likely a typo) also appears here. — [SDC Rides & Attractions](https://www.silverdollarcity.com/theme-park/attractions/rides/)
+- **Midtown**: Grandfather's Mansion and Hugo & Mary's Carousel. — [SDC Rides & Attractions](https://www.silverdollarcity.com/theme-park/attractions/rides/)
+- **Valley Road**: Frisco Silver Dollar Line Steam Train, The Flooded Mine (interactive boat ride); one summary also placed Time Traveler and Thunderation here. — [SDC Rides & Attractions](https://www.silverdollarcity.com/theme-park/attractions/rides/), [Theme Park Insider](https://www.themeparkinsider.com/reviews/silver-dollar-city/)
+- **Wilson's Farm**: Outlaw Run (RMC coaster), The Giant Barn Swing, High-Low Silos. — [SDC Rides & Attractions](https://www.silverdollarcity.com/theme-park/attractions/rides/)
+- **Hugo's Hill Street**: American Plunge (log flume), WildFire (B&M coaster, 155 ft drop, 5 inversions, 66 mph), and per one summary PowderKeg. Another summary placed WildFire and PowderKeg in Hugo's Hill Street. — [SDC Rides & Attractions](https://www.silverdollarcity.com/theme-park/attractions/rides/), [Miner's Mountain Express press page](https://www.silverdollarcity.com/press/miners-mountain-express/)
+- **Rivertown**: Mystic River Falls (river-rapids ride with a vertical lift, 45 ft drop, "tallest raft-ride drop in the Western Hemisphere") and Tom & Huck's RiverBlast (interactive water-raft ride). Mystic River Falls opened in 2020 (one source says July 21) and launched Rivertown as a new area, announced in 2019. — [Wikipedia: Mystic River Falls](https://en.wikipedia.org/wiki/Mystic_River_Falls), [Theme Park Insider](https://www.themeparkinsider.com/reviews/silver-dollar-city/)
+- **Western Outskirts**: appears in the official area list, but I found no attraction list for it. — [SDC Rides & Attractions](https://www.silverdollarcity.com/theme-park/attractions/rides/)
+- **Half Dollar Holler** (toddler play area with climbing structures and sand play): sources conflict on location. One guide lists it under The Grand Exposition, another under Midtown. — [Tripster search result](https://www.tripster.com/travelguide/landmark/silver-dollar-city/) and [Tripster Half Dollar Holler](https://www.tripster.com/travelguide/half-dollar-holler/)
+- **Marvel Cave**: tour takes about an hour, involves many stairs, not recommended for heart/lung conditions or weak backs, knees or ankles. Described as at or near the park entrance, and included with admission. — [Tripster Marvel Cave history](https://www.tripster.com/travelguide/learn-the-history-legend-of-silver-dollar-citys-marvel-cave/), [Wikipedia: Marvel Cave](https://en.wikipedia.org/wiki/Marvel_Cave) (as surfaced in search)
+- The park claims about 40 attractions and rides included with a pass. — search summary, [417 Magazine](https://www.417mag.com/outdoors/caving-in-the-ozarks/marvel-cave/) (date not shown)
+
+**New, closing, renamed (2023 to 2027)**
+- Fire in the Hole 2024 (see above); old 1972 version closed after 2023. — [Wikipedia](https://en.wikipedia.org/wiki/Fire_in_the_Hole_(2024_roller_coaster))
+- **Thunderation** (Arrow Dynamics, opened 1993, more than 27 million riders) was announced on Feb 16, 2026 to retire at the end of the 2026 season, with last day of operation January 2, 2027. It is still operating this fall, billed as a yearlong farewell. Park story: the Marvel Cave Mining Company is reclaiming the area for surveys. — [SDC press: Thunderation](https://www.silverdollarcity.com/press/thunderation/), [KCTV5 2026-02-16](https://www.kctv5.com/2026/02/16/end-an-era-silver-dollar-city-retiring-legendary-thunderation-roller-coaster/)
+- **Miner's Mountain Express**: announced Aug 14, 2026. A MACK Rides family coaster in a new area called **Daredevil Pass**, opening spring 2027. It has two lift hills, 15 airtime moments, a plunge past a flooded mine shaft, over half a mile of track, and a 15-story mine headframe. Daredevil Pass reportedly also connects WildFire, PowderKeg and American Plunge. It is part of a $150 million investment together with the Silver Dollar City Resort hotel. This is a 2027 item, so it will not be open during a fall 2026 visit, and construction may affect nearby walkways. — [Attractions Magazine](https://attractionsmagazine.com/silver-dollar-city-announces-new-mack-ride-2027/), [Theme Park Insider 2026-08](https://www.themeparkinsider.com/flume/202608/12597/), [KY3 2026-08-14](https://www.ky3.com/2026/08/14/watch-live-930-am-silver-dollar-city-announces-new-attraction/), [SDC press](https://www.silverdollarcity.com/press/miners-mountain-express/)
+- American Plunge: a 2025 fan-site post said the flume was being enclosed in a longer tunnel (March 2025, may be outdated; I could not confirm it reopened or its current state). — [Midwest Info Guide](https://www.midwestinfoguide.com/2025/03/silver-dollar-city-project-2026.html)
+- 2026 season items: season opened March 13, 2026 (66th season); a Comedy Stunt Show is listed among 2026 additions by a Table Rock Lake tourism page; Stars, Lights & Christmas Nights Parade debuts in 2026; the Showboat Branson Belle is being renamed Silver Dollar City's Showboat and moved to a new location in 2026; the Silver Dollar City Resort hotel was scheduled for late 2026. — [SDC press: 66th season](https://www.silverdollarcity.com/press/2026-spring-break/), [Branson.com](https://www.branson.com/silver-dollar-city-unveils-big-plans-for-2026/), [visittablerocklake.com](https://www.visittablerocklake.com/?p=65129), [Thousand Hills](https://thousandhillsvacations.com/whats-new-silver-dollar-city-2026/)
+- An Echo Hollow concert (America 250 kickoff) was held May 9, 2026, so Echo Hollow exists as a venue/location. — [Thousand Hills](https://thousandhillsvacations.com/whats-new-silver-dollar-city-2026/) via search summary
+- Seasonal festivals this fall: Harvest Festival Sept 11 to Oct 31, 2026; Pumpkins in the City (after dark) Sept 18 to Oct 31; An Old Time Christmas Nov 7, 2026 to Jan 2, 2027. — [SDC Harvest Festival](https://www.silverdollarcity.com/theme-park/festivals/harvest-festival/), [SDC press](https://www.silverdollarcity.com/press/harvest-festival-2026/), [Visit Table Rock Lake](https://business.visittablerocklake.com/events/details/silver-dollar-city-harvest-festival-14340)
+
+### Inferences
+- Rides listed under "The Grand Exposition" (Electro Spin, Elephant March, Happy Frogs, Wave carousel) are the family and toddler-friendly cluster, so a toddler plan should concentrate there, near Half Dollar Holler, and in Homestead Ridge (animal barnyard). This follows from the family-ride description, not from a toddler-specific official statement.
+- For a Park > Area > Activity model, use the nine official ride-page area names as top-level areas and add Daredevil Pass as a "future (2027)" area. Treat Half Dollar Holler and Marvel Cave as attractions needing a manual area assignment because sources conflict or give no area.
+- Because Thunderation runs through Jan 2, 2027, a fall 2026 visit can still ride it; this is a "last season" item worth flagging in a keepsake app.
+
+### Gaps
+- Official map and area boundaries were not retrievable (site blocked). Echo Hollow, Craftsmen's Valley, Wilderness Crossing, Hugo's Hollow, and the "Plaza" were not confirmed as official areas.
+- No area list for Western Outskirts, and no confirmed area for Marvel Cave, Half Dollar Holler, or Time Traveler/Thunderation (summaries conflict or were silent).
+- Craft shops (glass blowing, blacksmith, candle, pottery, etc.), live shows (Echo Hollow theaters, Opera House, etc.) and restaurants by area (for example Hickory Hollow, Aunt Polly's, Fire Station restaurants) could not be sourced. Do not infer them from memory; check the official attractions pages for crafts, shows and dining.
+- Whether Fire Wagon Frenzy, FireFall, and other attractions are open or under refurbishment in fall 2026 was not found. No refurbishment notices surfaced.
+
+## 2. Best natural walking order for a family with toddlers; hours; layout quirks (hills, strollers)
+
+### Takeaway
+Daily hours vary by date and are published only on the park's calendar. I could not confirm fall 2026 open and close times. Guides agree the park is hilly, with steep grades, cobblestone, stairs and uneven paths, so stroller rental and morning-first planning are recommended. A concrete area-by-area route could not be fully sourced.
+
+### Cited Findings
+- The park's daily hours vary by day and festival. The official Harvest Festival pages and the Visit Table Rock Lake listing say to check the park calendar; evening Plaza activities (family dance parties, photo ops) start at 5:30 pm; the pumpkin glow ("Pumpkins in the City") starts Sept 18. No open/close times were confirmed. — [SDC Harvest Festival](https://www.silverdollarcity.com/theme-park/festivals/harvest-festival/), [Visit Table Rock Lake](https://business.visittablerocklake.com/events/details/silver-dollar-city-harvest-festival-14340)
+- Hills are the main challenge: steep grades, cobblestone paths, winding trails, staircases and uneven terrain are common; one guide recommends tackling bigger climbs in the morning. — [Tripster tips](https://www.tripster.com/travelguide/silver-dollar-city-tips/) via search summary (date not shown)
+- Single and double strollers can be rented near the entrance; supply may be limited; one reviewer used a double stroller on the hills and said it was manageable. Rental policy and prices in those reviews are older and need re-checking. — [Tripadvisor review](https://www.tripadvisor.com/ShowUserReviews-g44160-d103201-r15679410-Silver_Dollar_City-Branson_Missouri.html), [Tripster tips](https://www.tripster.com/travelguide/silver-dollar-city-tips/)
+- Half Dollar Holler is a toddler-oriented play area; the pathways around it are stroller accessible but strollers cannot go on the climbing structures or sand play area; bring a spare outfit for sand play. — [Tripster Half Dollar Holler](https://www.tripster.com/travelguide/half-dollar-holler/)
+- Children 3 and younger get free admission; colored height wristbands from Guest Relations or the FireHouse Play Place help check ride eligibility. — [Tripster tips](https://www.tripster.com/travelguide/silver-dollar-city-tips/) via search summary
+- Weekdays are less crowded than Saturdays per one reviewer. — [Tripadvisor review](https://www.tripadvisor.com/ShowUserReviews-g44160-d103201-r15679410-Silver_Dollar_City-Branson_Missouri.html)
+- The official site offers a park map showing designated pathways for wheelchairs and ECVs, and a mobile app. — [SDC Accessibility](https://www.silverdollarcity.com/accessibility/silver-dollar-city-theme-park/), [SDC Mobile App](https://www.silverdollarcity.com/theme-park/guest-services/mobile-app/)
+- Archive of old park maps 1960 to 2025 exists for comparing layouts. — [Theme Park Brochures](https://www.themeparkbrochures.net/old-silver-dollar-city-maps/)
+
+### Inferences
+- A sensible toddler order, based only on the area descriptions above, is: rent a stroller at the entrance, ride gentler attractions first (Grand Exposition family rides and Half Dollar Holler, Homestead Ridge barnyard), take the Frisco steam train as a sit-down break, keep the Marvel Cave tour (stairs) optional or split between adults, and leave hill-heavy coaster areas (Hugo's Hill Street, Wilson's Farm) to older children or a parent swap. This is my inference, not a sourced itinerary.
+- Because the park offers evening content in October (Pumpkins in the City), closing time is probably later than a normal weekday; do not assume a time without checking the calendar.
+
+### Gaps
+- Fall 2026 opening and closing hours per date: not found. Check the park calendar or call 800-831-4FUN (number from a search summary, not verified).
+- Relative position of each area (entrance vs back) and measured walking distances: not found.
+- Current stroller rental prices and policies for 2026: not found. A "Little Moses" toddler ride was not found.
+
+## 3. What distinguishes the park aesthetically from a Disney-style park?
+
+### Takeaway
+I could not retrieve a source that directly describes the aesthetic comparison. The sourced material only supports the following: area names and ride themes are tied to 1880s-era history, Marvel Cave mining lore, World's Fair expositions and Ozarks farmland. Claims about craftsmen and no mascots are not backed by a source I could read.
+
+### Cited Findings
+- The Grand Exposition recreates the era of the World's Fairs and Expositions of the late 1800s. — [Tripster attractions page](https://www.tripster.com/branson/silver-dollar-city-attractions-branson)
+- The park uses an in-universe storyline: the Marvel Cave Mining Company (stopped operating in 1889 per park lore; the company is described as fictional park lore by Branson.com) is reclaiming part of the park, and Miner's Mountain Express draws on the Marble Cave Mining Company of the 1880s. — [SDC press: Thunderation](https://www.silverdollarcity.com/press/thunderation/), [Branson.com](https://www.branson.com/a-final-thunder-silver-dollar-citys-beloved-thunderation-to-retire-after-33-years/), [Attractions Magazine](https://attractionsmagazine.com/silver-dollar-city-announces-new-mack-ride-2027/)
+- The park describes itself as offering rides, dining, crafts, shopping and shows. — [417 Magazine](https://www.417mag.com/outdoors/caving-in-the-ozarks/marvel-cave/)
+- Harvest Festival is described officially as "acres of crafts by day and more than 20,000 pumpkins aglow at night," indicating crafts as a core festival feature. — [SDC Harvest Festival](https://www.silverdollarcity.com/theme-park/festivals/harvest-festival/)
+
+### Inferences
+- The in-universe mining-company storyline and period-specific area names support the "1880s Ozarks plus craft village" framing for the app, but the "no mascots" and architecture and color details need a source before being asserted.
+
+### Gaps
+- No readable source for: architecture and color palette per area, craftsmen demonstration details, the absence of costumed mascots, or Disney-comparison commentary. The Theme Park Insider guide ([link](https://www.themeparkinsider.com/reviews/silver-dollar-city/)) and Wikipedia article ([link](https://en.wikipedia.org/wiki/Silver_Dollar_City)) are the best places to read this and were not fully accessible.
+- Recommended next step: fetch the official area pages, the PDF map, and the Wikipedia article from a session with network access to silverdollarcity.com and wikipedia.org to close the gaps in sections 1 to 3.
